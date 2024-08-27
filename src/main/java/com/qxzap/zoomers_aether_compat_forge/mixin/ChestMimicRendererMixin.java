@@ -22,19 +22,22 @@ public class ChestMimicRendererMixin {
 
     private static final Material OLD_LOOTR_MATERIAL = new Material(Sheets.CHEST_SHEET, new ResourceLocation("lootr", "old_chest"));
 
-    @Inject(method = "getMaterial", at = @At("HEAD"), remap = false)
+    @Inject(method = "getMaterial", at = @At("HEAD"), remap = false, cancellable = true)
     private void injectCustomMaterial(ChestMimicBlockEntity blockEntity, CallbackInfoReturnable<Material> cir) {
         if (ModList.get().isLoaded("lootr")) {
             if (!ConfigManager.isVanillaTextures()) {
                 if (ConfigManager.isOldTextures()) {
                     cir.setReturnValue(OLD_LOOTR_MATERIAL);
+                    cir.cancel();
                 } else {
                     cir.setReturnValue(new Material(Sheets.CHEST_SHEET, new ResourceLocation("lootr", "chest")));
+                    cir.cancel();
                 }
                 return;
             }
         }
         // Default behavior if no conditions match
         cir.setReturnValue(Sheets.chooseMaterial(blockEntity, ChestType.SINGLE, this.xmasTextures));
+        cir.cancel();
     }
 }
