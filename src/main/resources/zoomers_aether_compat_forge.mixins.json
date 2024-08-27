@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.qxzap.zoomers_aether_compat_forge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "zoomers_aether_compat_forge.refmap.json",
+  "mixins": [
+    "ChestMimicRendererMixin"
+  ],
+  "client": [
+    "ChestMimicRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
