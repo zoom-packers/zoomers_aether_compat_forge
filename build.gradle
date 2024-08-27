@@ -156,45 +156,10 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf("curse.maven:aether-255308:5302178")
-    implementation fg.deobf("curse.maven:lootr-361276:5636598")
+    implementation fg.deobf("curse.maven:lootr-361276:5420132")
 
     runtimeOnly fg.deobf("curse.maven:aether-255308:5302178")
-    runtimeOnly fg.deobf("curse.maven:lootr-361276:5636598")
-
-
-//    implementation fg.deobf("curse.maven:lets-do-vinery-704465:5504123")
-//    implementation fg.deobf("curse.maven:lets-do-bakery-886559:5528402")
-//    implementation fg.deobf("curse.maven:lets-do-meadow-821483:5504102")
-//    implementation fg.deobf("curse.maven:lets-do-nethervinery-930072:5467444")
-//    implementation fg.deobf("curse.maven:lets-do-candlelight-846962:5427646")
-//    implementation fg.deobf("curse.maven:lets-do-brewery-971636:5427504")
-//    implementation fg.deobf("curse.maven:lets-do-herbal-brews-951221:5397666")
-//    implementation fg.deobf("curse.maven:lets-do-beachparty-858691:5320668")
-//
-//    runtimeOnly "curse.maven:lets-do-vinery-704465:5504123"
-//    runtimeOnly "curse.maven:lets-do-bakery-886559:5528402"
-//    runtimeOnly "curse.maven:lets-do-meadow-821483:5504102"
-//    runtimeOnly "curse.maven:lets-do-nethervinery-930072:5467444"
-//    runtimeOnly "curse.maven:lets-do-candlelight-846962:5427646"
-//    runtimeOnly "curse.maven:lets-do-brewery-971636:5427504"
-//    runtimeOnly "curse.maven:lets-do-herbal-brews-951221:5397666"
-//    runtimeOnly "curse.maven:lets-do-beachparty-858691:5320668"
-
-    // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
-
-
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
-
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    runtimeOnly fg.deobf("curse.maven:lootr-361276:5420132")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
